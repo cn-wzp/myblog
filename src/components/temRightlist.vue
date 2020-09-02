@@ -3,8 +3,8 @@
     <div class="rightlistBox">
         <section >
             <div class="r1-head">
-                <img :src="this.$store.state.themeObj.center_smailimg?this.$store.state.themeObj.center_smailimg:'/img/saibo.jpg'" alt="">
-                <h1 v-if="this.$store.state.themeObj.user_start!=0">
+                <img src='..//..//public/img/saibo.jpg'>
+                <h1>
                     <span>赛博朋克</span>Cyberpunk
                 </h1>
             </div>
@@ -13,24 +13,24 @@
                 <div class="catch-me" >
                     <div class="">
                         <el-tooltip  class="item"  content="Github" placement="top" >
-                            <a  :href="catchMeObj[isAimee].git" target="_blank" ><i class="fa fa-fw fa-github"></i></a>
+                            <a  :href="catchMeObj[isName].git" target="_blank" ><i class="fa fa-fw fa-github"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="QQ" placement="top">
-                            <a  :href="catchMeObj[isAimee].qq" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
+                            <a  :href="catchMeObj[isName].qq" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="微博" placement="top">
-                            <a :href="catchMeObj[isAimee].sina" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                            <a :href="catchMeObj[isName].sina" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
                         </el-tooltip>
                     </div>
                     <div class="">
                         <el-tooltip class="item" effect="dark" content="微信" placement="top">
-                            <a :href="catchMeObj[isAimee].wechat" target="_blank"><i class="fa fa-fw fa-wechat"></i></a>
+                            <a :href="catchMeObj[isName].wechat" target="_blank"><i class="fa fa-fw fa-wechat"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="CSDN" placement="top">
-                            <a :href="catchMeObj[isAimee].csdn" target="_blank"><i class="">C</i></a>
+                            <a :href="catchMeObj[isName].csdn" target="_blank"><i class="">C</i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="简历" placement="top">
-                            <a :href="catchMeObj[isAimee].job" target="_blank"><i class="fa fa-fw fa-file-word-o"></i></a>
+                            <a :href="catchMeObj[isName].job" target="_blank"><i class="fa fa-fw fa-file-word-o"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="更多" placement="top">
                             <a href="#/Aboutme" ><i class="el-icon-more"></i></a>
@@ -39,78 +39,33 @@
                 </div>
             </div>
         </section>
-        <section :class="fixDo?'rs2 fixed':'rs2'" @click="lovemeFun">
-            <p>
-                Do you like me?
-            </p>
-            <div class="">
-                <i :class="loveme?'heart active':'heart'" ></i>
-                <span>{{likeNum}}</span>
-            </div>
-        </section>
         <section></section>
         <section class="rs3" >
             <h2 class="ui label">
                 这些人都排着队来跟我说话
             </h2>
-            <ul class="rs3-textwidget">
-                <li class="rs3-item" v-for="(item,index) in artCommentList" :key="'artCommentList'+index">
-                    <a :href="'#/DetailShare?aid='+item.id" target="_blank">
-                        <div class="rs3-photo">
-                            <img :src="item.avatar"  :onerror="$store.state.errorImg">
-                        </div>
-                        <div class="rs3-inner">
-                            <p class="rs3-author">{{item.nickname}} 在「{{item.title}}」中说:</p>
-                            <p class="rs3-text">{{item.content}}</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+           
         </section>
-        <section class="rs4">
+            <section class="rs4">
             <h2 class="ui label">
                 大家都排队来看这些
             </h2>
-            <ul>
-                <li v-for="(item,index) in browseList" :key="'browseList'+index">
-                    <a :href="'#/DetailShare?aid='+item.id" target="_blank">{{item.title}}</a> —— {{item.browse_count}} 次围观
+             <ul>
+                <li>欢迎来做客！
                 </li>
             </ul>
         </section>
-        <!-- 右侧上滑小图片 -->
-        <div  v-if="this.$store.state.themeObj.user_start!=0" :class="gotoTop?'toTop hidden':'toTop goTop hidden'" @click="toTopfun">
-            <img :src="this.$store.state.themeObj.right_img?this.$store.state.themeObj.right_img:'/img/scroll.png'" alt="">
-        </div>
-        <div v-else :class="gotoTop?'toTophui hidden':'toTophui goTophui hidden'" @click="toTopfun">
-            <img :src="this.$store.state.themeObj.right_img?this.$store.state.themeObj.right_img:'/img/scroll.png'" alt="">
-        </div>
     </div>
 </template>
 
 
 <script>
-//import {ShowBrowseCount,ShowArtCommentCount,showLikeData,GetLike} from '../utils/server.js'
+
     export default {
         data() { //选项 / 数据
             return {
-                fixDo:false,
-                loveme:false,
-                gotoTop:false,//返回顶部
-                going:false,//是否正在执行上滑动作
-                browseList:'',//浏览量最多
-                artCommentList:'',//评论量最多
-                likeNum:0,//do you like me 点击量
-                initLikeNum:0,//初始化喜欢数量
-                catchMeObj:{//抓住我 个人信息
-                    Qinlh:{
-                        git:'https://github.com/omheshigenwozou',
-                        qq: '/img/qinlh/QQ.png',
-                        sina: 'https://weibo.com/u/6515930722',
-                        wechat: '/img/qinlh/WeChat.png',
-                        csdn: 'https://www.csdn.net/',
-                        job: '#'
-                    },
-                    Aimee:{
+                 catchMeObj:{// 个人信息
+                    wang:{
                      git:'https://github.com/omheshigenwozou',
                         qq: '/img/qinlh/QQ.png',
                         sina: 'https://weibo.com/u/6515930722',
@@ -119,45 +74,11 @@
                         job: '#'
                     }
                 },
-                isAimee:this.$store.state.themeObj.user_start!=0?"Aimee":"Qinlh"//判断是哪个的博客
+                isName:"wang"
             }
         },
-        methods: { //事件处理器
-            //do you love me  点击
-         /* lovemeFun:function(){
-                var that = this;
-                if(!this.loveme){
-                    that.likeNum+=1;
-                    GetLike(1,function(){
-                    })
-                }
-                this.loveme = true;
-                var timer = setTimeout(function(){
-                    that.loveme = false;
-                    clearTimeout(timer);
-                },3000)
-            },*/
-            toTopfun:function(e){
-                var that = this;
-                this.gotoTop = false;
-                this.going = true;
-                var timer = setInterval(function(){
-                      //获取滚动条距离顶部高度
-                      var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-                      var ispeed = Math.floor(-osTop / 7);
-                      document.documentElement.scrollTop = document.body.scrollTop = osTop+ispeed;
-                      //到达顶部，清除定时器
-                      if (osTop == 0) {
-                          that.going = false;
-                        clearInterval(timer);
-                        timer = null;
-                      };
-                },30);
-            },
-        },
-        components: { //定义组件
+        
 
-        },
         created() { //生命周期函数
             var that = this;
             window.onscroll = function(){
@@ -175,22 +96,7 @@
                 }else{
                     that.fixDo = false;
                 }
-
             }
-            //查询浏览量最多的10篇文章数据
- /*           ShowBrowseCount(function(data){
-                // console.log('浏览最多10文章数据',data);
-                that.browseList = data;
-            });
-            //查询文章评论量最大的10篇文章
-            ShowArtCommentCount(function(data){
-                // console.log('评论最多10文章数据',data);
-                that.artCommentList = data;
-            })
-            showLikeData(function(data){
-                that.likeNum = that.initLikeNum = data;
-            })
-*/
         }
     }
 </script>

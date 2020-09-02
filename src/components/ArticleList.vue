@@ -18,9 +18,9 @@
               <img src="/img/demo/Pinball.png" alt class="maxW"></p>
           </div>
         <div class="viewdetails">
-          <router-link to="/Text" class="tcolors-bg"> 阅读全文>></router-link>
-          <router-view></router-view>
-          <!-- <a href="/#Text"  class="tcolors-bg"> 阅读全文>></a> -->
+          <!-- <router-link to="/Text" class="tcolors-bg"> 阅读全文>></router-link>
+          <router-view></router-view> -->
+          <a href="/#Text"  class="tcolors-bg"> 阅读全文>></a> 
         </div>
       </div>
             <div class="item tcommonBox el-col el-col-24">

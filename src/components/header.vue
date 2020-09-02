@@ -16,21 +16,21 @@
               <el-menu-item index="/Aboutme">
                 <i class="fa fa-wa fa-vcard"></i> 关于
               </el-menu-item>
-              <div index class="pcsearchbox">
+              <!-- <div index class="pcsearchbox">
                 <i class="el-icon-search pcsearchicon"></i>
               </div>
               <div class="userInfo">
-                <div v-show="!haslogin" class="nologin">
+                <div class="nologin">
                   <a href="javascript:void(0);" @click="logoinFun(1)">登录&nbsp;</a>|
                   <a href="javascript:void(0);" @click="logoinFun(0)">&nbsp;注册</a>
                 </div>
-              </div>
+              </div> -->
             </el-menu>
           </div>
         </el-col>
       </el-row>
     </div>
-    <div class="headImgBox" style="url(/img/bg1.png)">
+    <div class="headImgBox" style="url(..//..//public/img/bg1.png)">
       <div class="scene">
         <div>
           <span id="luke"></span>
@@ -38,12 +38,12 @@
       </div>
       <div class="h-information">
         <a href="#/Aboutme">
-          <img src="/img/tou1.jpg" />
+          <img src="..//..//public/img/tou1.jpg" />
         </a>
         <h2 class="h-description">
           <a
             href="#/Aboutme"
-          >{{this.$store.state.themeObj.autograph?this.$store.state.themeObj.autograph:"Write the Code. Change the World."}}</a>
+          >{{"Write the Code. Change the World."}}</a>
         </h2>
       </div>
     </div>
@@ -55,7 +55,6 @@
 
 
 <script>
-//import { Typeit } from "../utils/plug.js"; //调用打字效果
 import "../assets/css/sigmar.css"
 export default {
   name: "Header",
@@ -64,21 +63,8 @@ export default {
   },
   watch: {},
   created() {},
-  mounted() {
-    //页面元素加载完成
-    // var that = this;
-    // var timer = setTimeout(function () {
-    //   Typeit(that.$store.state.themeObj.user_start, "#luke"); //打字机效果
-    //   clearTimeout(timer);
-    // }, 500);
-  },
 };
 </script>
-
-
-
-
-
 <style>
 /*********头部导航栏********/
 
@@ -102,6 +88,14 @@ export default {
   background: rgba(73, 69, 107, 0.7);
 }
 
+.el-menu {
+    border-radius: 2px;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    background-color: #eef1f6;
+}
 .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
   border-bottom: none !important;
 }
@@ -278,6 +272,7 @@ export default {
   height: 530px;
   position: relative;
   width: 100%;
+  background-image: url(..//..//public/img/bg1.png);
   background-size: cover;
   background-position: center 50%;
   background-repeat: no-repeat;

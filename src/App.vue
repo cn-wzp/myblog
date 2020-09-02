@@ -2,16 +2,16 @@
 <template>
   <div id="app">
       <Home></Home>
-      <Aboutme></Aboutme>
+      <!-- <Aboutme></Aboutme> -->
   </div>
 </template>
 
 <script>
-import Aboutme from "./pages/Aboutme";
+// import Aboutme from "./pages/Aboutme";
 import Home from "./pages/Home";
 export default {
   components: {
-    Aboutme,
+    // Aboutme,
     Home
   },
   name: "App",
