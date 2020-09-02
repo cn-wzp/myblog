@@ -20,9 +20,9 @@
 <script>
 import header from '../components/header.vue'
 import footer from '../components/footer.vue'
-//import temSharelist from '../components/temSharelist.vue'
+import temSharelist from '../components/temSharelist.vue'
 import temRightlist from '../components/temRightlist.vue'
-import ArticleList from "../components/ArticleList.vue";
+// import ArticleList from "../components/ArticleList.vue";
 export default {
 	name: "Share",
 	data() { //选项 / 数据
@@ -37,7 +37,7 @@ export default {
 		'wbc-nav': header,
 		'wbc-rightlist': temRightlist,
         'wbc-footer': footer,
-       'wbc-artclelist':ArticleList
+       'wbc-sharelist':temSharelist
 	},
 
 	created() { //生命周期函数
