@@ -9,7 +9,7 @@
       <p>
         <span>Made with</span>
         <img class="fheart" src="..//..//public/img/heart02.png" />
-        <span>by Aimee.</span>
+        <span>by wang.</span>
       </p>
     </div>
   </div>

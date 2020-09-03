@@ -7,14 +7,11 @@
           <!-- pc端导航 -->
           <div class="headBox">
             <el-menu class="el-menu-demo" mode="horizontal">
-              <el-menu-item index="/Home">
-                <i class="fa fa-wa fa-home"></i> 首页
-              </el-menu-item>
-              <el-menu-item index="/Message">
-                <i class="fa fa-wa fa-pencil"></i> 留言板
+              <el-menu-item index="/Home"><router-link to="/Home">
+                <i class="fa fa-wa fa-home" style="color:#fff"></i> 首页</router-link>
               </el-menu-item>
               <el-menu-item index="/Aboutme">
-                <i class="fa fa-wa fa-vcard"></i> 关于
+                <i class="fa fa-wa fa-vcard" style="color:#fff"></i> 关于
               </el-menu-item>
               <!-- <div index class="pcsearchbox">
                 <i class="el-icon-search pcsearchicon"></i>

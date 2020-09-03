@@ -17,22 +17,21 @@
                     <img :src="item.image" class="maxW">
                 </p>
             </div>
-            <div class="viewdetail"><a class="tcolors-bg">阅读全文>></a></div>
+            <div class="viewdetail"><router-link to="{path:'/:id'}" class="tcolors-bg">阅读全文>></router-link></div>
            
         </el-col>
     </el-row>
 </template>
 
 <script>
-// import '..//../assets/css/style.less'
     export default {
         name:'Share',
         data() { 
             return {
             items:[
-                {title:'弹球小游戏和打字游戏',description:'放松必备小游戏:',image:'/img/demo/Pinball.png'},
-                {title:"记账本和便签的使用",description:'手写记账本和便签你值得拥有:',image:"/img/demo/记账本.png"},
-                {title:"网页语音的输入和输出",description:"HTML5语音合成Speech Synthesis API:", image:"/img/demo/speeh.png"},
+                {title:'弹球小游戏和打字游戏',description:'放松必备小游戏:',image:'/img/demo/Pinball.png' },
+                {title:"记账本和卡片的使用",description:'手写记账本和卡片你值得拥有:',image:"/img/demo/记账本.png"},
+                {title:"语音识别和语音合成",description:"HTML5语音合成Speech Synthesis API:", image:"/img/demo/speeh.png"},
                 {title:"web-API接口的应用",description:"使用API接口获取想要的东西并展示再web页面上:", image:"/img/demo/caidan.png"},
                 {title:"很火的电影院选座",description:"电影价格和影片的关系，选座的实现:", image:"/img/demo/movies.png"},
                 {title:"web页面播放、音频",description:"web页面视频和音频播放器的构成:", image:"/img/demo/musicplay.png"},
@@ -42,6 +41,9 @@
             ]
             }
         },
+        // computed:{
+        //     path:"/test/:Text",name:'Test' ,component:require('../pages/Text.vue')  
+        //           }
     }
 </script>
 
@@ -49,7 +51,7 @@
 /*分享标题*/
 .prompt{
     margin-top: 40px;
-    width: 96%;
+    width: auto;
     border:1px #999 dashed;
     border-radius: 5px;
     color:#999;
@@ -105,5 +107,8 @@
     text-align: center;
     font-size: 20px;
      background:rgba(255,255,255,.8);;
+  }
+  a{
+      cursor: pointer;
   }
 </style>

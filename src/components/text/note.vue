@@ -1,4 +1,5 @@
 <template>
+<el-row class="sharelistBox">
   <div class="main">
     <div class="item_left"></div>
     <div class="item_center">
@@ -8,8 +9,8 @@
       </div>
       <div class="item tcommonBox el-col el-col-24">
         <header>
-          <h1><a href="/#Text" target="_blank">记账本和便签的使用</a></h1>
-          <div class="ui label">便签</div>
+          <h1><a href="/#Text" target="_blank">记账本和卡片的使用</a></h1>
+          <div class="ui label">记账本</div>
           </header>
           <div class="content">
           <p style=" font-size:16px; text-indent: 2em;">
@@ -22,43 +23,53 @@
                   你可以在下面添加你收入和指出的事件名和金额。<p> 
               <br/>
               <br/>
-              <p><strong>快捷使用：</strong><br/><br/>只需要你动动小手，就能记录你的。</p><br/>
-              <p><strong>技术支持：</strong>游戏的完成基于HTML+CSS+JS搭建完成。</p><br/>
+              <p><strong>快捷使用：</strong><br/><br/>只需要你动动小手，就能记录你的消费记录。</p><br/>
+              <p><strong>技术支持：</strong>记账本的完成基于HTML+CSS+JS搭建完成。</p><br/>
               <strong>代码逻辑：</strong><br/><br/>
-              <p>&nbsp;&nbsp;1.构造一个画布，在画布上使用函数画出小球、砖块和接球板，规定颜色为＃0095dd或者为透明。</p><br/>
-              <p>&nbsp;&nbsp;2.规定小球、砖块和接球板块道具，分别设置大小、速度、xy轴的长度和运行速度。设置积分器。<br/>
-                <img src="/img/demo/game.png"><img src="/img/demo/game2.png"><img src="/img/demo/game3.png"></p><br/>
-              <p>&nbsp;&nbsp;3.下一步规定小球和接球板的移动范围：小球的移动范围为画布内的任何地方，接球板的移动范围只能在底部规定高度的X轴范围内且在画布内。</p><br/>
-              <p>&nbsp;&nbsp;4.使用for循环的，进行砖块的填充。</p><br/>
-              <p>&nbsp;&nbsp;5.对小球和接球板进行碰撞处理，小球按照规定角度进行弹射处理，如果碰到障碍物墙壁和接球板则进行角度弹射，如果碰到砖块，砖块会变为不可见的颜色，并且积分+1，然后小球根据碰撞的角度进行弹射。</p><br/>
-              <p>&nbsp;&nbsp;6.声明函数keyDown 和keyup 控制接球板的左右移动。</p><br/>
-              <p>&nbsp;&nbsp;7.最后监听事件，键盘按下事件：keydown() 是在键盘按下就会触发，键盘弹起事件：keyup() 是在键盘松手就会触发。</p><br/>
-              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/game">源码</a></i>
-              <br/><br/><br/>
-              <h2>接下来是打字游戏</h2><br/>
+              <p>&nbsp;&nbsp;1.使用Math.floor(Math.random() * 1000000000)的方法随机生成一个ID。</p><br/>
+              <p>&nbsp;&nbsp;2.创建函数判断事件和金额的输入，并传入ID中，记录该事件和金额的消费生成单条消费记录，提交后会呈现在页面上。<br/>
+                <img src="/img/demo/note.png"></p><br/>
+              <p>&nbsp;&nbsp;3.创建函数改变页面上balance、plus、minus每次记录消费之后的金额变化。
+                <img src="/img/demo/note1.png"></p><br/>
+              <p>&nbsp;&nbsp;4.创建按钮，删除单条消费，用于更改因错误记录而提交的消费记录。</p><br/>
+              <p>&nbsp;&nbsp;5.最后监听事件，将要的函数绑定在submit事件中，触发提交事件。</p><br/>
+              <br/>
+              <br/>
+              <p><strong>遇到的一些问题：</strong><br/>
+              一.事件和金额输入的过程中,内容前和内容后有一些空格，消费记录里并不希望会有这些空格的存在。
+              <br/><br/>
+              解决方法：使用trim()方法消除内容前后的空格。如果只希望消除内容前的空格可以使用trimStart()，相反消除内容后的空格则使用trimEnd()。
+              <br/><br/>
+              二. 消费记录的保存问题， 如果刷新页面则之前输入的内容会全部消失。
+              <br/><br/>
+              解决方法：使用localStorage.setItem(key,value)将value存储到key字段，刷新页面后使用localStorage.getItem(key)获取指定key本地存储的值。
+              </p>             <br/><br/><br/>
+              <h2>接下来是卡片</h2><br/>
               <p>先上图：</p>
               <p style="margin-top: 15px;">
-              <img src="/img/demo/speed.png" alt class="maxW"></p>
+              <img src="/img/demo/bianqian.png" alt class="maxW"></p>
               <h1>页面的构造:</h1>
               <br/>
-              <p>游戏界面有深蓝色构成，页面顶部可以调整游戏难度，中间则是输入打字的部分，并且有倒计时和计分器，左下角的按钮可以隐藏顶部改变难度的区域。<p> 
+              <p>首先头部添加卡片的按钮，下面有翻页的按钮，左下角是清除本页卡片的按钮。<p> 
               <br/>
               <br/>
-              <p><strong>游戏规则：</strong><br/><br/>进入页面后游戏会自动开始，倒计时十秒，如果单词输入正确，计时器会根据难度相应的增加秒数，计分器计算正确的数量，并在倒计时为0后，显示单词的正确数量。</p><br/>
-              <p><strong>技术支持：</strong>游戏的完成基于HTML+CSS+JS搭建完成。</p><br/>
+              <p><strong>快捷使用：</strong><br/><br/>点击添加按钮，页面刷新，输入你所要记录问题和答案，点击Add Card添加内容。添加完成后可点击当前页面的问题翻转页面查看答案。</p><br/>
+              <p><strong>技术支持：</strong>项目的完成基于HTML+CSS+JS+jQuery搭建完成。</p><br/>
               <strong>实现逻辑:</strong>
-              <p>&nbsp;&nbsp;1.构建一个单词数组。</p><br/>
-              <p>&nbsp;&nbsp;2.创建倒计时、计分器、难度等函数。</p><br/>
-              <p>&nbsp;&nbsp;3.使用Math.floor(Math.random() * words.length产生随机单词并显示在网页上。</p><br/>
-              <p>&nbsp;&nbsp;4.判断输入的单词和显示的单词是否一致，如果一致则判断难度增加相应的time，并且更新单词，否则不会更新新的单词，也不会增加时间。<br/>
-              <img src="/img/demo/game4.png"></p><br/>
-              <p>&nbsp;&nbsp;5.监听事件：将函数绑定在'change'事件，规定当被选元素的 change 事件发生时运行函数。<br/>
-              <img src="/img/demo/game5.png"></p><br/>
-              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/game">源码</a></i>
+              <p>&nbsp;&nbsp;1.创建所有卡片。</p><br/>
+              <p>&nbsp;&nbsp;2.添加隐藏和显示的容器，切换正常页面和添加内容时的页面。</p><br/>
+              <p>&nbsp;&nbsp;3.在DOM中创建一张卡片，建造函数显示卡数，将卡添加到本地储存，从本地获取到卡的内容。</p><br/>
+              <p>&nbsp;&nbsp;4.监听翻页按钮和清除卡片的按钮，全部使用click事件来进行。<br/>
+              <img src="/img/demo/note2.png"></p><br/><br/>
+              <p><strong>一些小问题：</strong><br/>
+              主页面和添加内容页面的切换。 </p><br/><br/>
+              <p>解决办法：使用add()和remove()元素来切换内容之间的转换。</p><br/><br/>
+              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/note">源码</a></i>
           </div>
       </div> 
     </div>
   </div>
+</el-row>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+<el-row class="sharelistBox">
   <div class="main">
     <div class="item_left"></div>
     <div class="item_center">
@@ -32,7 +33,11 @@
               <p>&nbsp;&nbsp;5.对小球和接球板进行碰撞处理，小球按照规定角度进行弹射处理，如果碰到障碍物墙壁和接球板则进行角度弹射，如果碰到砖块，砖块会变为不可见的颜色，并且积分+1，然后小球根据碰撞的角度进行弹射。</p><br/>
               <p>&nbsp;&nbsp;6.声明函数keyDown 和keyup 控制接球板的左右移动。</p><br/>
               <p>&nbsp;&nbsp;7.最后监听事件，键盘按下事件：keydown() 是在键盘按下就会触发，键盘弹起事件：keyup() 是在键盘松手就会触发。</p><br/>
-              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/game">源码</a></i>
+              <p><strong>遇到的一些问题：</strong>
+              <br/><br />
+              一. 小球碰撞砖块后砖块的消失。解决思路：使用fillStyle= ball.visible ? '#0095dd' : 'transparent';的方法去判断砖块的颜色，然后执行fill()填充数组。
+              <br /><br />
+              二：小球和接球板方向的改变。解决思路：如果小球和接球板的方向是朝向x、y的正半轴的话则dx=x,dy=y,否则的话dx*=-1,dy*=-1(使小球和接球板的方向往相反的反向运动)。<br /> </p>
               <br/><br/><br/>
               <h2>接下来是打字游戏</h2><br/>
               <p>先上图：</p>
@@ -51,28 +56,20 @@
               <p>&nbsp;&nbsp;3.使用Math.floor(Math.random() * words.length产生随机单词并显示在网页上。</p><br/>
               <p>&nbsp;&nbsp;4.判断输入的单词和显示的单词是否一致，如果一致则判断难度增加相应的time，并且更新单词，否则不会更新新的单词，也不会增加时间。<br/>
               <img src="/img/demo/game4.png"></p><br/>
-              <p>&nbsp;&nbsp;5.监听事件：将函数绑定在'change'事件，规定当被选元素的 change 事件发生时运行函数。<br/>
+              <p>&nbsp;&nbsp;5.最后监听事件：将函数绑定在'change'事件，规定当被选元素的 change 事件发生时运行函数。<br/>
               <img src="/img/demo/game5.png"></p><br/>
+              <br/>
               <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/game">源码</a></i>
           </div>
       </div> 
     </div>
   </div>
+</el-row>
 </template>
 
 <script>
   export default {
-  computed: {
-    username() {
-      // 我们很快就会看到 `params` 是什么
-      return this.$route.params.username
-    }
-  },
-  methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-    }
-  }
+  name:"Text"
 }
 </script>
 

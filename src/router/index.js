@@ -52,14 +52,6 @@ export default new Router({
             },
             name: 'Text'
         },
-        {
-            path: '/Note',
-            component: resolve => require(['../pages/Note.vue'], resolve),
-            meta: {
-                auth: true
-            },
-            name: 'Note'
-        },
 
     ]
 })
