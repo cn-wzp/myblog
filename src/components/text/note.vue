@@ -9,7 +9,7 @@
       </div>
       <div class="item tcommonBox el-col el-col-24">
         <header>
-          <h1><a href="/#Text" target="_blank">记账本和卡片的使用</a></h1>
+          <h1>记账本和卡片的使用</h1>
           <div class="ui label">记账本</div>
           </header>
           <div class="content">

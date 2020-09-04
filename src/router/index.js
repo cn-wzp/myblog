@@ -20,13 +20,14 @@ export default new Router({
             }
         }
     },
-    routes: [{
+    routes: [
+        {
             path: '/',
             component: resolve => require(['../pages/Home.vue'], resolve),
             meta: {
                 auth: true
             },
-            name: 'Home'
+            name: 'home'
         }, //首页
         {
             path: '/Home',
@@ -37,12 +38,12 @@ export default new Router({
             name: 'Home'
         },
         {
-            path: '/Text',
-            component: resolve => require(['../components/Text.vue'], resolve),
+            path: '/game',
+            component: resolve => require(['../components/Game.vue'], resolve),
             meta: {
                 auth: true
             },
-            name: 'Text'
+            name: 'game'
         },
         {
             path: '/Note',
@@ -51,13 +52,22 @@ export default new Router({
                 auth: true
             },
             name: 'Note'
-        },   {
+        },
+        {
             path: '/Speech',
             component: resolve => require(['../components/Speech.vue'], resolve),
             meta: {
                 auth: true
             },
             name: 'Speech'
+        },
+        {
+            path: '/Api',
+            component: resolve => require(['../components/Web-api.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'Api'
         },
 
     ]

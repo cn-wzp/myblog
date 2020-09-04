@@ -9,7 +9,7 @@
       </div>
       <div class="item tcommonBox el-col el-col-24">
         <header>
-          <h1><a href="/#Text" target="_blank">语音识别和语音合成</a></h1>
+          <h1>语音识别和语音合成</h1>
           <div class="ui label">speech</div>
           </header>
           <div class="content">
