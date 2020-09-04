@@ -37,20 +37,27 @@ export default new Router({
             name: 'Home'
         },
         {
-            path: '/Share',
-            component: resolve => require(['../pages/Share.vue'], resolve),
-            meta: {
-                auth: true
-            },
-            name: 'Share'
-        }, //分类
-        {
             path: '/Text',
-            component: resolve => require(['../pages/Text.vue'], resolve),
+            component: resolve => require(['../components/Text.vue'], resolve),
             meta: {
                 auth: true
             },
             name: 'Text'
+        },
+        {
+            path: '/Note',
+            component: resolve => require(['../components/Note.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'Note'
+        },   {
+            path: '/Speech',
+            component: resolve => require(['../components/Speech.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'Speech'
         },
 
     ]

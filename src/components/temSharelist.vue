@@ -6,7 +6,7 @@
       </div>
         <el-col class="s-item tcommonBox el-col el-col-24" v-for="(item) in items" :key="item.index">
             <header>
-                <h1>{{item.title}}</h1>
+                <h1><a @click="$router.push(item.push)" >{{item.title}}</a></h1>
                 <div class="ui label">小项目</div>
             </header>
             <div class="article-content">
@@ -17,21 +17,19 @@
                     <img :src="item.image" class="maxW">
                 </p>
             </div>
-            <div class="viewdetail"><router-link to="{path:'/:id'}" class="tcolors-bg">阅读全文>></router-link></div>
-           
+            <div class="viewdetail"><a @click="$router.push(item.push)"  class="tcolors-bg">阅读全文</a></div>
         </el-col>
     </el-row>
-</template>
-
+ </template>
 <script>
     export default {
         name:'Share',
         data() { 
             return {
             items:[
-                {title:'弹球小游戏和打字游戏',description:'放松必备小游戏:',image:'/img/demo/Pinball.png' },
-                {title:"记账本和卡片的使用",description:'手写记账本和卡片你值得拥有:',image:"/img/demo/记账本.png"},
-                {title:"语音识别和语音合成",description:"HTML5语音合成Speech Synthesis API:", image:"/img/demo/speeh.png"},
+                {title:'弹球小游戏和打字游戏',description:'放松必备小游戏:',image:'/img/demo/Pinball.png' ,push:"/Text"},
+                {title:"记账本和卡片的使用",description:'手写记账本和卡片你值得拥有:',image:"/img/demo/记账本.png",push:"/Note"},
+                {title:"语音识别和语音合成",description:"HTML5语音合成Speech Synthesis API:", image:"/img/demo/speeh.png",push:"/Speech"},
                 {title:"web-API接口的应用",description:"使用API接口获取想要的东西并展示再web页面上:", image:"/img/demo/caidan.png"},
                 {title:"很火的电影院选座",description:"电影价格和影片的关系，选座的实现:", image:"/img/demo/movies.png"},
                 {title:"web页面播放、音频",description:"web页面视频和音频播放器的构成:", image:"/img/demo/musicplay.png"},

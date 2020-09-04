@@ -6,8 +6,8 @@
         <el-row  :gutter="30" style="margin-left: -15px; margin-right: -15px;">
             <el-col :sm="24" :md="16" style="padding-left: 15px;padding-right: 15px;transition: all 0.5s ease-out 0s;margin-bottom: 30px;">
                 <wbc-text></wbc-text>
-                <wbc-note></wbc-note>
-                <wbc-speech></wbc-speech>
+                <!-- <wbc-note></wbc-note>
+                <wbc-speech></wbc-speech> -->
             </el-col>
             <el-col :sm="24" :md="8">
                 <wbc-rightlist></wbc-rightlist>
@@ -23,8 +23,8 @@ import temRightlist from '../components/temRightlist.vue'
 import footer from '../components/footer.vue'
 // import ArticleList from "../components/ArticleList.vue"
 import text from '../components/text/text.vue'
-import note from '../components/text/note.vue'
-import speech from '../components/text/speech.vue'
+// import note from '../components/text/note.vue'
+// import speech from '../components/text/speech.vue'
 export default {
         name:'Text',
         data() { //选项 / 数据
@@ -40,8 +40,8 @@ export default {
             'wbc-rightlist':temRightlist,
             'wbc-footer': footer,
             'wbc-text':text,
-            'wbc-note':note,
-            'wbc-speech':speech,
+            // 'wbc-note':note,
+            // 'wbc-speech':speech,
         },
         created(){
         }
