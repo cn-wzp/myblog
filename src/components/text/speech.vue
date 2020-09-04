@@ -21,7 +21,7 @@
           <p style=" font-size:16px; text-indent: 2em;">
             <i class="fa  fa-wa fa-home"></i><strong>这是个小游戏:</strong></p>
             <p style="margin-top: 15px;">
-              <img src="/img/demo/speeh.png" alt class="maxW"></p><br/>
+               <iframe :src="speech" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe><br/>
               <h1>游戏介绍:</h1>
               <br/>
               <p>进入游戏页面后，会询问你是否允许使用麦克风，允许之后网页本身会随机产生一个1-100以内的数字，你只需输出你猜的数字，网页会自动识别你所说内容，并判断
@@ -52,7 +52,7 @@
               <h2>语音合成：</h2><br/>
               <p>先上图：</p>
               <p style="margin-top: 15px;">
-              <img src="/img/demo/speak.png" alt class="maxW"></p>
+              <iframe :src="read" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
               <h1>页面的布局:</h1>
               <br/>
               <p>头部是一个添加文字框的按钮。下面部分是一张张图片，并配上了一些文字。<p> 
@@ -82,7 +82,14 @@
 
 <script>
     export default {
-        name: "specch"
+        name: "speech",
+        data(){
+            return{
+              speech:'./caishuzi.html',
+              read:"./langdu.html",
+
+            }
+        }
     }
 </script>
 

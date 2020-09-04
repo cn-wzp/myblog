@@ -16,7 +16,7 @@
           <p style=" font-size:16px; text-indent: 2em;">
             <i class="fa  fa-wa fa-home"></i><strong>首先是弹球小游戏的界面:</strong></p>
             <p style="margin-top: 15px;">
-              <img src="/img/demo/Pinball.png" alt class="maxW"></p><br/>
+              <iframe :src="game" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
               <h1>页面的构造:</h1>
               <br/>
               <p>游戏界面由背景蓝色构建，白色画布上展现游戏内容，左上角的按钮介绍游戏规则<p> 
@@ -42,7 +42,7 @@
               <h2>接下来是打字游戏</h2><br/>
               <p>先上图：</p>
               <p style="margin-top: 15px;">
-              <img src="/img/demo/speed.png" alt class="maxW"></p>
+              <iframe :src="speed" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
               <h1>页面的构造:</h1>
               <br/>
               <p>游戏界面有深蓝色构成，页面顶部可以调整游戏难度，中间则是输入打字的部分，并且有倒计时和计分器，左下角的按钮可以隐藏顶部改变难度的区域。<p> 
@@ -69,7 +69,14 @@
 
 <script>
   export default {
-  name:"Text"
+  name:"Text",
+  data(){
+    return {
+      speed:"./wordyanzheng.html",
+      game:"./xiaoyouxi.html",
+
+    }
+  }
 }
 </script>
 

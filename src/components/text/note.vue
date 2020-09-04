@@ -16,7 +16,7 @@
           <p style=" font-size:16px; text-indent: 2em;">
             <i class="fa  fa-wa fa-home"></i><strong>首先记账本的页面:</strong></p>
             <p style="margin-top: 15px;">
-              <img src="/img/demo/记账本.png" alt class="maxW"></p><br/>
+              <iframe :src="jilu" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
               <h1>页面的构造:</h1>
               <br/>
               <p>这是一个方便快捷的记账本，你可以去记录每一分的收入和支出，简单明了，最上方给出了你的余额、收入和支出，而中间部分则显示了你的历史账单，
@@ -47,7 +47,7 @@
               <h2>接下来是卡片</h2><br/>
               <p>先上图：</p>
               <p style="margin-top: 15px;">
-              <img src="/img/demo/bianqian.png" alt class="maxW"></p>
+              <iframe :src="kapian" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
               <h1>页面的构造:</h1>
               <br/>
               <p>首先头部添加卡片的按钮，下面有翻页的按钮，左下角是清除本页卡片的按钮。<p> 
@@ -74,8 +74,15 @@
 
 <script>
     export default {
-        name: "note"
+        name: "note",
+        data(){
+      return{
+        jilu:"./xiaofeijilu.html",
+        kapian:"./chucun.html",
+      }
     }
+    }
+    
 </script>
 
 <style  scoped>

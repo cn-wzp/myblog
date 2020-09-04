@@ -36,14 +36,11 @@
                 {title:"很火的电影院选座",description:"电影价格和影片的关系，选座的实现:", image:"/img/demo/movies.png"},
                 {title:"web页面播放、音频",description:"web页面视频和音频播放器的构成:", image:"/img/demo/musicplay.png"},
                 {title:"计时和倒计时",description:"利用web的日期时间实现秒表和新年倒计时:", image:"/img/demo/newyear.png"},
-                {title:"js入门之登录页面的实现",description:"常见的登录页面和注册页面的实现：", image:"/img/demo/zhuce1.png"},
+                {title:"js入门之注册页面的实现",description:"常见注册页面的实现：", image:"/img/demo/zhuce1.png"},
                 {title:"初学html+css",description:"一个前端小白自学HTML和css的自述:", image:"/img/demo/css.png"}
             ]
             }
         },
-        // computed:{
-        //     path:"/test/:Text",name:'Test' ,component:require('../pages/Text.vue')  
-        //           }
     }
 </script>
 
