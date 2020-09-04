@@ -72,7 +72,7 @@
               <p>解决办法：监听speechSynthesis接口，使用voiceschanged事件使网络语音API时的名单被触发SpeechSynthesisVoice，改变返回的对象SpeechSynthesis.getVoices()。</p><br/><br/>
               <p>二.点击按钮弹出文字框的操作</p><br/><br/>
               <p>解决办法：监听按钮进入和退出文字框内容的按钮，用classList返回该节点的元素，使用toggle()方法切换一个元素和remove()的方法移除这个文本框的元素和节点。</p>
-              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/note">源码</a></i>
+              <strong>具体的游戏逻辑，欢迎上Github了解</strong><i><a href="https://github.com/omheshigenwozou/speech">源码</a></i>
           </div>
       </div> 
     </div>
