@@ -69,6 +69,45 @@ export default new Router({
             },
             name: 'Api'
         },
-
+        {
+            path: '/movie',
+            component: resolve => require(['../components/movie.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'movie'
+        },
+        {
+            path: '/play',
+            component: resolve => require(['../components/play.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'play'
+        },
+        {
+            path: '/countdown',
+            component: resolve => require(['../components/countdown.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'countdown'
+        },
+        {
+            path: '/register',
+            component: resolve => require(['../components/register.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'register'
+        },
+        {
+            path: '/css',
+            component: resolve => require(['../components/css.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'css'
+        },
     ]
 })

@@ -14,11 +14,31 @@
               <div class="item_center">
                 <div class="prompt">
                   <i class="fa fa-volume-up fa-fw"></i>&nbsp;&nbsp;欢迎来到我的博客~>ω
-                </div>
+                </div></div>
                 <div class="item tcommonBox el-col el-col-24">
-                    <iframe :src="huilv" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
-                    <iframe :src="boke" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
+                    <header>
+                    <h1>
+                      web-API接口的应用
+                    </h1>
+                    <div class="ui label">demo</div>
+                  </header>
+                  <div class="content">
+                    <p style=" font-size:16px; text-indent: 2em;">
+                      <i class="fa fa-wa fa-home"></i>
+                      <strong>首先是转换金币汇率的的页面:</strong>
+                    </p><br/><br/>
+                    <iframe :src="huilv" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe><br/><br/>
+                    <strong>然后是个很多无效信息的blog，使用Web-api获取信息实现无限滚动：</strong><br/><br/>
+                    <iframe :src="boke" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe><br/><br/>
+                    <strong>最后是一个食物做法的查询器：</strong><br/><br/>
                     <iframe :src="caidan" ref="iframe" scrolling="0" style="width: 100%;height: 500px;" frameborder="0"></iframe>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <strong>具体的游戏逻辑，欢迎上Github了解</strong>
+                    <i>
+                      <a href="https://github.com/omheshigenwozou/web-Api">源码</a>
+                    </i>
                 </div>
               </div>
             </div>

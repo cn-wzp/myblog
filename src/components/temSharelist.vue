@@ -58,26 +58,31 @@ export default {
           title: "很火的电影院选座",
           description: "电影价格和影片的关系，选座的实现:",
           image: "/img/demo/movies.png",
+          push:"/movie"
         },
         {
           title: "web页面播放、音频",
           description: "web页面视频和音频播放器的构成:",
           image: "/img/demo/musicplay.png",
+          push:"/play"
         },
         {
-          title: "计时和倒计时",
+          title: "计时和新年倒计时",
           description: "利用web的日期时间实现秒表和新年倒计时:",
           image: "/img/demo/newyear.png",
+          push:"./countdown"
         },
         {
           title: "js入门之注册页面的实现",
           description: "常见注册页面的实现：",
           image: "/img/demo/zhuce1.png",
+          push:"./register"
         },
         {
           title: "初学html+css",
-          description: "一个前端小白自学HTML和css的自述:",
+          description: "一个小白自学HTML和css:",
           image: "/img/demo/css.png",
+          push:"css"
         },
       ],
     };
