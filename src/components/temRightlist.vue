@@ -13,24 +13,24 @@
                 <div class="catch-me" >
                     <div class="">
                         <el-tooltip  class="item"  content="Github" placement="top" >
-                            <a  :href="catchMeObj[isName].git" target="_blank" ><i class="fa fa-fw fa-github"></i></a>
+                            <a  :href="catchMeObj[isName].git"  ><i class="fa fa-fw fa-github"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="QQ" placement="top">
-                            <a  :href="catchMeObj[isName].qq" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
+                            <a  :href="catchMeObj[isName].qq" ><i class="fa fa-fw fa-qq"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="微博" placement="top">
-                            <a :href="catchMeObj[isName].sina" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                            <a :href="catchMeObj[isName].sina" ><i class="fa fa-fw fa-weibo"></i></a>
                         </el-tooltip>
                     </div>
                     <div class="">
                         <el-tooltip class="item" effect="dark" content="微信" placement="top">
-                            <a :href="catchMeObj[isName].wechat" target="_blank"><i class="fa fa-fw fa-wechat"></i></a>
+                            <a :href="catchMeObj[isName].wechat" ><i class="fa fa-fw fa-wechat"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="CSDN" placement="top">
-                            <a :href="catchMeObj[isName].csdn" target="_blank"><i class="">C</i></a>
+                            <a :href="catchMeObj[isName].csdn"><i class="">C</i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="简历" placement="top">
-                            <a :href="catchMeObj[isName].job" target="_blank"><i class="fa fa-fw fa-file-word-o"></i></a>
+                            <a :href="catchMeObj[isName].job" ><i class="fa fa-fw fa-file-word-o"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="更多" placement="top">
                             <a href="#/Aboutme" ><i class="el-icon-more"></i></a>
