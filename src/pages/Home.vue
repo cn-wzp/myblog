@@ -34,7 +34,7 @@ export default {
             'wbc-nav':header,
             'wbc-rightlist':temRightlist,
             'wbc-footer': footer,
-            'wbc-sharelist': sharelist
+            'wbc-sharelist': sharelist,
         },
         created(){
         }

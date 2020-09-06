@@ -13,21 +13,12 @@
               <el-menu-item index="/Aboutme">
                 <i class="fa fa-wa fa-vcard" style="color:#fff"></i> 关于
               </el-menu-item>
-              <!-- <div index class="pcsearchbox">
-                <i class="el-icon-search pcsearchicon"></i>
-              </div>
-              <div class="userInfo">
-                <div class="nologin">
-                  <a href="javascript:void(0);" @click="logoinFun(1)">登录&nbsp;</a>|
-                  <a href="javascript:void(0);" @click="logoinFun(0)">&nbsp;注册</a>
-                </div>
-              </div> -->
             </el-menu>
           </div>
         </el-col>
       </el-row>
     </div>
-    <div class="headImgBox" style="url(..//..//public/img/bg1.png)">
+    <div class="headImgBox" style="url(..//public/img/bg1.png)">
       <div class="scene">
         <div>
           <span id="luke"></span>

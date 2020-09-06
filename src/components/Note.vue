@@ -161,7 +161,6 @@
     <wbc-footer></wbc-footer>
   </div>
 </template>
-</template>
 
 <script>
 import header from "../components/header.vue";

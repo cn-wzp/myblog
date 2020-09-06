@@ -38,6 +38,14 @@ export default new Router({
             name: 'Home'
         },
         {
+            path: '/Share',
+            component: resolve => require(['../components/temSharelist.vue'], resolve),
+            meta: {
+                auth: true
+            },
+            name: 'Share'
+        },
+        {
             path: '/game',
             component: resolve => require(['../components/Game.vue'], resolve),
             meta: {
