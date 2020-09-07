@@ -18,16 +18,64 @@
                 </div>
                 <div class="item tcommonBox el-col el-col-24">
                   <header>
-                    <h1>
-                      弹球小游戏和打字游戏
-                    </h1>
+                    <h1>打字游戏和弹球小游戏</h1>
                     <div class="ui label">demo</div>
                   </header>
+                  <br />
+                  <br />
+                  <br />
                   <div class="content">
-                    <p style=" font-size:16px; text-indent: 2em;">
-                      <i class="fa fa-wa fa-home"></i>
-                      <strong>首先是弹球小游戏的界面:</strong>
-                    </p>
+                  <p style=" font-size:16px; text-indent: 2em;"></p>
+                  <h2>首先是打字游戏</h2>
+                  <br />
+                  <p>先上网页：</p>
+                  <p style="margin-top: 15px;">
+                    <iframe
+                      :src="speed"
+                      ref="iframe"
+                      scrolling="0"
+                      style="width: 100%;height: 500px;"
+                      frameborder="0"
+                    ></iframe>
+                  </p>
+                  <h1>页面的构造:</h1>
+                  <br />
+                  <p>游戏界面有深蓝色构成，页面顶部可以调整游戏难度，中间则是输入打字的部分，并且有倒计时和计分器，左下角的按钮可以隐藏顶部改变难度的区域。</p>
+                  <p>
+                    <br />
+                    <br />
+                  </p>
+                  <p>
+                    <strong>游戏规则：</strong>
+                    <br />
+                    <br />进入页面后游戏会自动开始，倒计时十秒，如果单词输入正确，计时器会根据难度相应的增加秒数，计分器计算正确的数量，并在倒计时为0后，显示单词的正确数量。
+                  </p>
+                  <br />
+                  <p>
+                    <strong>技术支持：</strong>游戏的完成基于HTML+CSS+JS搭建完成。
+                  </p>
+                  <br />
+                  <strong>实现逻辑:</strong>
+                  <p>&nbsp;&nbsp;1.构建一个单词数组。</p>
+                  <br />
+                  <p>&nbsp;&nbsp;2.创建倒计时、计分器、难度等函数。</p>
+                  <br />
+                  <p>&nbsp;&nbsp;3.使用Math.floor(Math.random() * words.length产生随机单词并显示在网页上。</p>
+                  <br />
+                  <p>
+                    &nbsp;&nbsp;4.判断输入的单词和显示的单词是否一致，如果一致则判断难度增加相应的time，并且更新单词，否则不会更新新的单词，也不会增加时间。
+                    <br />
+                    <img src="/img/demo/game4.png" />
+                  </p>
+                  <br />
+                  <p>
+                    &nbsp;&nbsp;5.最后监听事件：将函数绑定在'change'事件，规定当被选元素的 change 事件发生时运行函数。
+                    <br />
+                    <img src="/img/demo/game5.png" />
+                  </p>
+                  <br />
+                  <br />
+                      <h2>然后是弹球小游戏的界面:</h2>
                     <p style="margin-top: 15px;">
                       <iframe
                         :src="game"
@@ -86,55 +134,6 @@
                       <br />
                     </p>
                     <br />
-                    <br />
-                    <br />
-                    <h2>接下来是打字游戏</h2>
-                    <br />
-                    <p>先上图：</p>
-                    <p style="margin-top: 15px;">
-                      <iframe
-                        :src="speed"
-                        ref="iframe"
-                        scrolling="0"
-                        style="width: 100%;height: 500px;"
-                        frameborder="0"
-                      ></iframe>
-                    </p>
-                    <h1>页面的构造:</h1>
-                    <br />
-                    <p>游戏界面有深蓝色构成，页面顶部可以调整游戏难度，中间则是输入打字的部分，并且有倒计时和计分器，左下角的按钮可以隐藏顶部改变难度的区域。</p>
-                    <p>
-                      <br />
-                      <br />
-                    </p>
-                    <p>
-                      <strong>游戏规则：</strong>
-                      <br />
-                      <br />进入页面后游戏会自动开始，倒计时十秒，如果单词输入正确，计时器会根据难度相应的增加秒数，计分器计算正确的数量，并在倒计时为0后，显示单词的正确数量。
-                    </p>
-                    <br />
-                    <p>
-                      <strong>技术支持：</strong>游戏的完成基于HTML+CSS+JS搭建完成。
-                    </p>
-                    <br />
-                    <strong>实现逻辑:</strong>
-                    <p>&nbsp;&nbsp;1.构建一个单词数组。</p>
-                    <br />
-                    <p>&nbsp;&nbsp;2.创建倒计时、计分器、难度等函数。</p>
-                    <br />
-                    <p>&nbsp;&nbsp;3.使用Math.floor(Math.random() * words.length产生随机单词并显示在网页上。</p>
-                    <br />
-                    <p>
-                      &nbsp;&nbsp;4.判断输入的单词和显示的单词是否一致，如果一致则判断难度增加相应的time，并且更新单词，否则不会更新新的单词，也不会增加时间。
-                      <br />
-                      <img src="/img/demo/game4.png" />
-                    </p>
-                    <br />
-                    <p>
-                      &nbsp;&nbsp;5.最后监听事件：将函数绑定在'change'事件，规定当被选元素的 change 事件发生时运行函数。
-                      <br />
-                      <img src="/img/demo/game5.png" />
-                    </p>
                     <br />
                     <br />
                     <strong>具体的游戏逻辑，欢迎上Github了解</strong>

@@ -10,8 +10,8 @@
               <el-menu-item index="/Home"><router-link to="/Home">
                 <i class="fa fa-wa fa-home" style="color:#fff"></i> 首页</router-link>
               </el-menu-item>
-              <el-menu-item index="/Aboutme">
-                <i class="fa fa-wa fa-vcard" style="color:#fff"></i> 关于
+              <el-menu-item index="/Aboutme"><router-link to="/Aboutme">
+                <i class="fa fa-wa fa-vcard" style="color:#fff"></i> 关于</router-link>
               </el-menu-item>
             </el-menu>
           </div>

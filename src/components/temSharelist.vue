@@ -31,7 +31,7 @@ export default {
     return {
       items: [
         {
-          title: "弹球小游戏和打字游戏",
+          title: "打字游戏和弹球小游戏",
           description: "放松必备小游戏:",
           image: "/img/demo/Pinball.png",
           push: "/game",

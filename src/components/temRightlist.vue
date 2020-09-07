@@ -33,7 +33,7 @@
                             <a :href="catchMeObj[isName].job" ><i class="fa fa-fw fa-file-word-o"></i></a>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="更多" placement="top">
-                            <a href="#/Aboutme" ><i class="el-icon-more"></i></a>
+                            <a href="#" ><i class="el-icon-more"></i></a>
                         </el-tooltip>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         sina: 'https://weibo.com/u/6515930722',
                         wechat: '/img/qinlh/WeChat.png',
                         csdn: 'https://www.csdn.net/',
-                        job: '#'
+                        job: './王志鹏-前端开发.pdf',
                     }
                 },
                 isName:"wang"
