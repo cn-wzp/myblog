@@ -1,5 +1,7 @@
 module.exports = {
-  publicPath     : './',//使用相对路径，防止打包上线可能导致资源加载失败
+  publicPath     :  process.env.NODE_ENV === 'production'
+  ? '/myblog/'
+  : '/',//使用相对路径，防止打包上线可能导致资源加载失败
   outputDir      : 'dist',
   assetsDir      : 'assets',
   devServer      : {
