@@ -1,4 +1,36 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: node_js
+node_js: stable
+
+# 指定缓存模块，可选。缓存可加快编译速度。
+cache:
+  directories:
+    - node_modules
+
+    
+#安装hexo及插件
+install:
+  - npm install  
+
+#清除 生成
+script:
+  - hexo clean  
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "omheshigenwozou"
+  - git config user.email "1538567833@qq.com"
+  - git add .
+  - git commit -m "update"
+  - git push --force --quiet "https://${GH_TOKEN}@${github.com/omheshigenwozou/myblog}" master:master
+
+#默认一个分支可以忽略此配置--监视github仓库中的master分支，分支出现变化就执行build
+#branches:
+#  only:
+#    - blogTS
+
+#build以后的地址
+env:
+ global:
+   - GH_REF: github.com/omheshigenwozou/myblog
