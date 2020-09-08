@@ -54,7 +54,7 @@ export default new Router({
             name: 'Share'
         },
         {
-            path: '/game',
+            path: '/Game',
             component: resolve => require(['../components/Game.vue'], resolve),
             meta: {
                 auth: true
@@ -86,7 +86,7 @@ export default new Router({
             name: 'Api'
         },
         {
-            path: '/movie',
+            path: '/Movie',
             component: resolve => require(['../components/movie.vue'], resolve),
             meta: {
                 auth: true
@@ -94,7 +94,7 @@ export default new Router({
             name: 'movie'
         },
         {
-            path: '/play',
+            path: '/Play',
             component: resolve => require(['../components/play.vue'], resolve),
             meta: {
                 auth: true
@@ -102,7 +102,7 @@ export default new Router({
             name: 'play'
         },
         {
-            path: '/countdown',
+            path: '/Countdown',
             component: resolve => require(['../components/countdown.vue'], resolve),
             meta: {
                 auth: true
@@ -110,7 +110,7 @@ export default new Router({
             name: 'countdown'
         },
         {
-            path: '/register',
+            path: '/Register',
             component: resolve => require(['../components/register.vue'], resolve),
             meta: {
                 auth: true
@@ -118,7 +118,7 @@ export default new Router({
             name: 'register'
         },
         {
-            path: '/css',
+            path: '/Css',
             component: resolve => require(['../components/css.vue'], resolve),
             meta: {
                 auth: true

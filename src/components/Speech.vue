@@ -41,7 +41,7 @@
                         :src="speech"
                         ref="iframe"
                         scrolling="0"
-                        style="width: 100%;height: 500px;"
+                        style="width: 100%;height: 800px;"
                         frameborder="0"
                       ></iframe>
                       <br />
